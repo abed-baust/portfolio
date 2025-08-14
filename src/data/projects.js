@@ -1,0 +1,94 @@
+const projects = [
+  {
+    slug: 'clubeez',
+    title: 'Clubeez — Community & Club Platform',
+    description: 'Developed production frontend with Vue 3; integrated with .NET backend to deliver event management, memberships, and real‑time notifications.',
+    tech: ['Vue 3', 'Vite', 'Pinia', 'ASP.NET API'],
+    role: 'Frontend Engineer',
+    stack: 'Vue 3 + .NET',
+    link: 'https://www.webalive.com.au/project/clubeez/',
+    tags: ['vue', '.net']
+  },
+  {
+    slug: 'mining-bull',
+    title: 'Mining Bull — Mining Data Intelligence',
+    description: 'Implemented modern Vue 3 interface for data discovery with performant tables, filters, and map visualizations.',
+    tech: ['Vue 3', 'Vue Router', 'REST API'],
+    role: 'Frontend Engineer',
+    stack: 'Vue 3',
+    link: 'https://www.webalive.com.au/project/mining-bull/',
+    tags: ['vue']
+  },
+  {
+    slug: 'business-plaza',
+    title: 'Business Plaza',
+    description: 'Built enterprise features on ASP.NET + Angular stack including auth, dashboards, and role‑based access control.',
+    tech: ['ASP.NET', 'Angular', 'JWT', 'SQL'],
+    role: 'Full‑Stack Engineer',
+    stack: 'ASP.NET + Angular',
+    link: 'https://www.webalive.com.au/project/business-plaza/',
+    tags: ['angular', '.net']
+  },
+  {
+    slug: 'chamera',
+    title: 'Chamera',
+    description: 'Contributed Angular + Kendo UI interfaces backed by ASP.NET services; focused on UX and performance.',
+    tech: ['ASP.NET', 'Angular', 'Kendo UI'],
+    role: 'Full‑Stack Engineer',
+    stack: 'ASP.NET + Angular + Kendo',
+    link: 'https://www.webalive.com.au/project/chamera/',
+    tags: ['angular', '.net']
+  },
+  {
+    slug: 'mininghub',
+    title: 'MiningHub',
+    description: 'Node/Express services and vanilla JS frontend for data pipelines and admin portal.',
+    tech: ['Node.js', 'Express', 'PostgreSQL', 'JS'],
+    role: 'Backend + Frontend',
+    stack: 'Node + Express + JS',
+    link: 'https://mininghub.daybud.com/home',
+    tags: ['node']
+  },
+  {
+    slug: 'nintendo',
+    title: 'Nintendo — Internal tooling',
+    description: 'Frontend features in Vue 3 for internal dashboards and workflows.',
+    tech: ['Vue 3', 'Vite', 'REST'],
+    role: 'Frontend Engineer',
+    stack: 'Vue 3',
+    link: '',
+    tags: ['vue']
+  },
+  {
+    slug: 'locumwest',
+    title: 'Locumwest',
+    description: 'Vue 3 front‑end for healthcare staffing workflows with reusable components and state management.',
+    tech: ['Vue 3', 'Pinia', 'Axios'],
+    role: 'Frontend Engineer',
+    stack: 'Vue 3',
+    link: '',
+    tags: ['vue']
+  },
+  {
+    slug: 'webalive-erp',
+    title: 'Webalive ERP',
+    description: 'Laravel + JS modules for ERP — inventory, invoicing, and reporting with role‑based permissions.',
+    tech: ['Laravel', 'PHP', 'MySQL', 'JS'],
+    role: 'Full‑Stack Engineer',
+    stack: 'Laravel + JS',
+    link: '',
+    tags: ['php']
+  },
+  {
+    slug: 'lantech',
+    title: 'Lantech',
+    description: 'Designed and delivered Vue 3 frontend components and app architecture for a B2B platform.',
+    tech: ['Vue 3', 'Vite', 'Pinia'],
+    role: 'Frontend Engineer',
+    stack: 'Vue 3',
+    link: '',
+    tags: ['vue']
+  }
+]
+
+export default projects
