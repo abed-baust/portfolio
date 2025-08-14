@@ -22,13 +22,11 @@
     </div>
   </form>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 const name = ref('')
 const email = ref('')
 const message = ref('')
-
 const submit = () => {
   const subject = encodeURIComponent('New project inquiry from ' + name.value)
   const body = encodeURIComponent(message.value + '\n\n' + 'Reply to: ' + email.value)

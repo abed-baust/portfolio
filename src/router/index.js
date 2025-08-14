@@ -1,11 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
 const Home = () => import('../pages/Home.vue')
 const Projects = () => import('../pages/Projects.vue')
 const Resume = () => import('../pages/Resume.vue')
 const Contact = () => import('../pages/Contact.vue')
-
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'home', component: Home },
@@ -13,7 +11,5 @@ const router = createRouter({
     { path: '/resume', name: 'resume', component: Resume },
     { path: '/contact', name: 'contact', component: Contact },
   ],
-  scrollBehavior() { return { top: 0 } }
+  scrollBehavior(){ return { top: 0 } }
 })
-
-export default router

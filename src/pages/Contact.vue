@@ -5,11 +5,7 @@
     <ContactForm />
   </section>
 </template>
-
 <script setup>
 import ContactForm from '../components/ContactForm.vue'
 </script>
-
-<style scoped>
-.muted{ color: var(--muted); }
-</style>
+<style scoped>.muted{ color: var(--muted); }</style>

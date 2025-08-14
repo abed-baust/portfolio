@@ -13,7 +13,4 @@
     </div>
   </section>
 </template>
-
-<style scoped>
-.muted{ color: var(--muted); }
-</style>
+<style scoped>.muted{ color: var(--muted); }</style>

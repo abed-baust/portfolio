@@ -14,7 +14,6 @@
     </div>
   </article>
 </template>
-
 <script setup>
 defineProps({ project: Object })
 </script>

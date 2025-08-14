@@ -10,15 +10,10 @@
         <RouterLink class="btn" to="/projects">Projects</RouterLink>
         <RouterLink class="btn" to="/resume">Resume</RouterLink>
         <RouterLink class="btn" to="/contact">Contact</RouterLink>
-        <button class="btn" @click="toggleTheme" aria-label="Toggle theme">🌓</button>
       </nav>
     </div>
   </header>
 </template>
-
 <script setup>
-import { useTheme } from '../store/theme'
 import { RouterLink } from 'vue-router'
-const theme = useTheme()
-const toggleTheme = () => theme.toggle()
 </script>

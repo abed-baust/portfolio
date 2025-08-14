@@ -14,17 +14,11 @@
     </div>
   </section>
 </template>
-
 <script setup>
 import { ref, computed } from 'vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import projects from '../data/projects'
-
 const active = ref('all')
 const setFilter = (v) => active.value = v
-
-const filtered = computed(() => {
-  if(active.value === 'all') return projects
-  return projects.filter(p => p.tags?.includes(active.value))
-})
+const filtered = computed(() => active.value === 'all' ? projects : projects.filter(p => p.tags?.includes(active.value)))
 </script>
