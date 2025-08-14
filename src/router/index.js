@@ -6,10 +6,10 @@ const Contact = () => import('../pages/Contact.vue')
 export default createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', name: 'home', component: Home },
-    { path: '/projects', name: 'projects', component: Projects },
-    { path: '/resume', name: 'resume', component: Resume },
-    { path: '/contact', name: 'contact', component: Contact },
+    { path: '/portfolio', name: 'home', component: Home },
+    { path: '/portfolio/projects', name: 'projects', component: Projects },
+    { path: '/portfolio/resume', name: 'resume', component: Resume },
+    { path: '/portfolio/contact', name: 'contact', component: Contact },
   ],
   scrollBehavior(){ return { top: 0 } }
 })

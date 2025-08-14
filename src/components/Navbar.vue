@@ -6,10 +6,10 @@
         <strong style="letter-spacing:.3px;">Md Abedur Rahman</strong>
       </div>
       <nav style="display:flex; gap:.6rem; align-items:center;">
-        <RouterLink class="btn" to="/">Home</RouterLink>
-        <RouterLink class="btn" to="/projects">Projects</RouterLink>
-        <RouterLink class="btn" to="/resume">Resume</RouterLink>
-        <RouterLink class="btn" to="/contact">Contact</RouterLink>
+        <RouterLink class="btn" to="/portfolio">Home</RouterLink>
+        <RouterLink class="btn" to="/portfolio/projects">Projects</RouterLink>
+        <RouterLink class="btn" to="/portfolio/resume">Resume</RouterLink>
+        <RouterLink class="btn" to="/portfolio/contact">Contact</RouterLink>
       </nav>
     </div>
   </header>
