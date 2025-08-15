@@ -11,8 +11,8 @@
       </p>
       <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem;">
         <a class="btn primary" href="/portfolio/Md-Abedur-Rahman-Resume.pdf" download>⬇ Download Resume</a>
-        <RouterLink class="btn" to="/portfolio/projects">View Projects</RouterLink>
-        <RouterLink class="btn" to="/portfolio/contact">Hire Me</RouterLink>
+        <RouterLink class="btn" to="/projects">View Projects</RouterLink>
+        <RouterLink class="btn" to="/contact">Hire Me</RouterLink>
       </div>
     </div>
     <div class="reveal" style="justify-self:end;">
