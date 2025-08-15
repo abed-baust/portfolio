@@ -1,7 +1,6 @@
 <template>
   <section class="section container">
     <h2>Resume</h2>
-    <p class="muted">Download or view my latest resume below.</p>
     <div class="nav" style="margin-bottom: 1rem;">
       <a class="btn primary" :href="base + 'Md-Abedur-Rahman-Resume.pdf'" download>⬇ Download PDF</a>
       <a class="btn" :href="base + 'Md-Abedur-Rahman-Resume.pdf'" target="_blank" rel="noopener">Open in new tab</a>

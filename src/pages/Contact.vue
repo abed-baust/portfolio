@@ -1,7 +1,6 @@
 <template>
   <section class="section container">
     <h2>Contact</h2>
-    <p class="muted">I’m available for freelance and full‑time collaborations. Let’s build something great.</p>
     <form @submit.prevent="submit" class="card" style="display:grid; gap:.8rem;">
       <input v-model="name" required placeholder="Your name" class="input" />
       <input v-model="email" type="email" required placeholder="you@example.com" class="input" />
