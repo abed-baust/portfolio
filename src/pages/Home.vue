@@ -1,41 +1,29 @@
 <template>
-  <section class="hero">
-    <div class="card">
-      <div class="grid" style="gap: 12px;">
-        <span class="tag">Hi, I'm Buzz 👋</span>
-        <h1 style="margin:0;font-size:clamp(26px,4vw,40px);line-height:1.1;">
-          Software Developer • Researcher • Builder
-        </h1>
-        <p class="muted" style="margin:0;">
-          I build fast, reliable web apps and love data-heavy problems. Scroll to see selected work or jump to the Projects page.
-        </p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:6px;">
-          <RouterLink class="btn" to="/projects">View Projects</RouterLink>
-          <a class="btn" style="background:transparent;color:var(--text);border:1px solid rgba(148,163,184,.25)"
-             href="#contact">Contact</a>
-        </div>
+  <div>
+    <Hero />
+    <section class="section container">
+      <h2>About</h2>
+      <p style="color:var(--muted); max-width:75ch;">
+        I design and deliver business‑critical applications, from API to UI. Comfortable leading features end‑to‑end:
+        gathering requirements, designing data models, writing clean backend services in ASP.NET or Node/Express,
+        and building fast, accessible interfaces in Vue 3 or Angular. I value reliability, performance, and human‑
+        centered UX.
+      </p>
+    </section>
+    <section class="section container">
+      <h2>Featured projects</h2>
+      <div class="grid cols-3">
+        <ProjectCard v-for="p in featured" :key="p.slug" :project="p" />
       </div>
-    </div>
-    <div class="card" style="text-align:center;">
-      <img class="avatar" src="/src/assets/profile.png" alt="Profile photo" />
-      <p class="muted" style="margin-top:10px;">Based in Bangladesh • Open to work</p>
-    </div>
-  </section>
-
-  <section style="margin-top:24px;">
-    <div class="grid cols-3">
-      <div class="card">
-        <h3>YOLOv8 Traffic Analytics</h3>
-        <p class="muted">Real-time vehicle detection and congestion metrics from Dhaka traffic feeds.</p>
-      </div>
-      <div class="card">
-        <h3>MiningHub</h3>
-        <p class="muted">Data pipeline fixes, bulk update & alias mapping, performance tuning.</p>
-      </div>
-      <div class="card">
-        <h3>SPR-based PCF Sensor</h3>
-        <p class="muted">Dual-peak detection with Au/AZO layers, high WS & AS performance.</p>
-      </div>
-    </div>
-  </section>
+      <div style="margin-top:1rem"><RouterLink class="btn" to="/projects">See all projects</RouterLink></div>
+    </section>
+  </div>
 </template>
+<script setup>
+import Hero from '../components/Hero.vue'
+import ProjectCard from '../components/ProjectCard.vue'
+import { default as projects } from '../data/projects'
+const featured = projects.slice(0,6)
+import { RouterLink } from 'vue-router'
+</script>
+<style scoped>.muted{ color: var(--muted); }</style>
