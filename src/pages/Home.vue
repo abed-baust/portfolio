@@ -133,3 +133,4 @@ const featured = projects.slice(0, 6)
   background: transparent;
 }
 </style>
+ 
