@@ -47,7 +47,7 @@ import { RouterLink } from 'vue-router'
 const featured = projects.slice(0, 6)
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .h2 {
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
   line-height: 1.2;
@@ -133,4 +133,4 @@ const featured = projects.slice(0, 6)
   background: transparent;
 }
 </style>
- 
+  -->
