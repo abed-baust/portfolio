@@ -1,47 +1,135 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section class="section container hero">
-      <div>
-        <span class="badge">Full‑Stack Engineer • ASP.NET • Vue 3 • Angular • Node</span>
-        <h1 style="font-size: clamp(2rem, 5vw, 3rem); line-height:1.05; margin:.6rem 0 1rem 0;">
-          I build robust, scalable web apps for real business impact.
-        </h1>
-        <p style="color:var(--muted); max-width: 65ch;">
-          4+ years shipping production software: ASP.NET backends, Node/Express services, and Vue 3/Angular frontends.
-          Worked on Webalive projects (Clubeez, Mining Bull, Business Plaza, Chamera), Nintendo internal tooling,
-          Locumwest, Webalive ERP, and Lantech.
-        </p>
-        <div class="nav" style="margin-top:1rem;">
-          <RouterLink class="btn primary" :to="{ name: 'projects' }">See Projects</RouterLink>
-          <RouterLink class="btn" :to="{ name: 'contact' }">Hire Me</RouterLink>
-        </div>
-      </div>
+    <!-- Hero section comes from components/Hero.vue -->
+    <Hero />
 
-      <!--
-      <div class="photo-wrap" style="justify-self:end;">
-        <img class="photo" :src="base + 'images/abed.png'" alt="Md Abedur Rahman" />
-      </div>
-      -->
+    <!-- About -->
+    <section class="section container">
+      <h2 class="h2">About</h2>
+      <p class="muted about-text">
+        I design and deliver business‑critical applications, from API to UI. Comfortable leading features end‑to‑end:
+        gathering requirements, designing data models, writing clean backend services in ASP.NET or Node/Express,
+        and building fast, accessible interfaces in Vue 3 or Angular. I value reliability, performance, and
+        human‑centered UX.
+      </p>
     </section>
 
     <!-- Featured Projects -->
     <section class="section container">
-      <h2>Featured Projects</h2>
-      <div class="grid cols-3">
+      <div class="feat-head">
+        <h2 class="h2">Featured projects</h2>
+        <!-- Optional link on the right for larger screens -->
+        <RouterLink class="btn ghost only-lg" :to="{ name: 'projects' }" aria-label="See all projects">
+          See all projects
+        </RouterLink>
+      </div>
+
+      <div class="grid cards">
         <ProjectCard v-for="p in featured" :key="p.slug" :project="p" />
       </div>
-      <div style="margin-top:1rem">
-        <RouterLink class="btn" :to="{ name: 'projects' }">See all projects</RouterLink>
+
+      <!-- For small screens, show CTA below the grid -->
+      <div class="cta-sm">
+        <RouterLink class="btn" :to="{ name: 'projects' }" aria-label="See all projects">
+          See all projects
+        </RouterLink>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import Hero from '../components/Hero.vue'
 import ProjectCard from '../components/ProjectCard.vue'
-import projects from './projects.data'
+import { default as projects } from '../data/projects'
+import { RouterLink } from 'vue-router'
 
 const featured = projects.slice(0, 6)
 </script>
+
+<style scoped>
+.h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  line-height: 1.2;
+  margin: 0 0 .8rem 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.about-text {
+  max-width: 75ch;
+  margin: 0;
+}
+
+/* Featured header: title + link on larger screens */
+.feat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  margin-bottom: .6rem;
+}
+
+.only-lg {
+  display: inline-flex;
+}
+
+@media (max-width: 700px) {
+  .only-lg {
+    display: none;
+  }
+}
+
+/* Cards grid: 1 → 2 → 3 responsive columns */
+.grid.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid.cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid.cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Small‑screen CTA below grid */
+.cta-sm {
+  margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+  .cta-sm {
+    display: none;
+  }
+}
+
+/* Button variants (keeps with your existing theme) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+  transition: transform .12s ease, border-color .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, .18);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+</style>
