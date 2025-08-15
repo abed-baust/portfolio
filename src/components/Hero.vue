@@ -6,7 +6,7 @@
         Building robust, scalable web apps for business impact.
       </h1>
       <p style="color:var(--muted); max-width: 60ch;">
-        3+ years shipping production software at Bit Mascot and Webalive‑powered projects. Expertise across
+        4+ years shipping production software at Bit Mascot and Webalive‑powered projects. Expertise across
         ASP.NET, Node/Express, Vue 3, and Angular with modern CI/CD and quality‑first practices.
       </p>
       <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem;">
